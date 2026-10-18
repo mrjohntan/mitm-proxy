@@ -2,7 +2,7 @@
 # Entries support exact hostnames or glob wildcards (e.g., *.domain.com, *-dot-*.domain.com)
 
 whitelist:
-  - "*-dot-asia-southeast1.notebooks.googleusercontent.com"
+  - "*.notebooks.googleusercontent.com"
   - "cloudresourcemanager.googleapis.com"
   - "compute.googleapis.com"
   - "fonts.gstatic.com"
@@ -13,6 +13,7 @@ whitelist:
   - "cloudusersettings-pa.clients6.google.com"
   - "console.cloud.google.com"
   - "notebooks.clients6.google.com"
+  - "*.notebooks.cloud.google.com"
   - "www.gstatic.com"
 
 settings:
