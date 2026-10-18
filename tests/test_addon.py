@@ -51,6 +51,7 @@ settings:
         self.assertIn("unapproved.example.com", payload["message"])
 
     def test_tls_clienthello_passthrough_when_allowed(self):
+        self.addon.matcher.tls_passthrough = True
         data = MagicMock()
         data.context.client.sni = "cloud.google.com"
         data.context.server.address = ("cloud.google.com", 443)

@@ -18,3 +18,4 @@ whitelist:
 settings:
   default_action: "block" # "block" returns 403; "log_only" logs without blocking
   reload_check_seconds: 2 # Interval in seconds to poll for file changes
+  tls_passthrough: false # false: intercepts TLS so individual URL endpoints appear in Web UI; true: raw TCP bypass

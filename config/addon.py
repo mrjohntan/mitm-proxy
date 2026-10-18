@@ -63,7 +63,10 @@ class EgressWhitelistAddon:
                 ctx.log.info(f"[ALLOWED] CONNECT {target} - whitelisted")
 
     def tls_clienthello(self, data):
-        """Bypasses TLS decryption for whitelisted connections."""
+        """Bypasses TLS decryption for whitelisted connections if tls_passthrough is True."""
+        if not self.matcher.tls_passthrough:
+            return
+
         sni = getattr(data.context.client, "sni", None)
         server_addr = getattr(data.context.server, "address", None)
         host = sni or (server_addr[0] if server_addr else None)

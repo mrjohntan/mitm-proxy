@@ -20,6 +20,7 @@ class DomainMatcher:
         self.last_mtime = 0.0
         self.rules: list[str] = []
         self.default_action = "block"
+        self.tls_passthrough = False
         self._load_config(force=True)
 
     def _parse_yaml_or_fallback(self, content: str) -> dict:
@@ -85,6 +86,9 @@ class DomainMatcher:
 
             settings = data.get("settings", {})
             self.default_action = settings.get("default_action", "block")
+            raw_tls_pt = settings.get("tls_passthrough", False)
+            self.tls_passthrough = str(raw_tls_pt).lower() in ("true", "1", "yes")
+
             if "reload_check_seconds" in settings:
                 try:
                     self.check_interval_seconds = float(settings["reload_check_seconds"])
