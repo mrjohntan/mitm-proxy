@@ -49,11 +49,11 @@ docker compose logs mitmproxy
 ```
 
 * **Proxy Listener:** `http://localhost:8080`
-* **Web UI Dashboard:** `http://localhost:8081`
+* **Web UI Dashboard:** `http://localhost:8081` (Password: `admin`)
 
 ### 2. Open the Web Dashboard
 
-Open `http://localhost:8081` in your browser. You will see live traffic flows as requests pass through or get blocked by the proxy.
+Open `http://localhost:8081` in your browser. Enter password **`admin`** when prompted. You will see live traffic flows as requests pass through or get blocked by the proxy.
 
 ---
 
