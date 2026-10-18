@@ -23,11 +23,9 @@ mitm proxy/
 ├── scripts/
 │   ├── test-egress.sh
 │   └── launch-brave.sh
-├── docs/
-│   └── superpowers/
-│       └── specs/
-│           └── 2026-10-18-mitmproxy-egress-whitelist-design.md
-└── README.md
+└── docs/
+    ├── 2026-10-18-mitmproxy-egress-whitelist-design.md
+    └── README.md
 ```
 
 ---
