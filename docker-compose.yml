@@ -11,6 +11,7 @@ services:
       --listen-port 8080
       -s /home/mitmproxy/config/addon.py
       --set block_global=false
+      --set web_password=admin
     ports:
       - "8080:8080" # Forward proxy
       - "8081:8081" # mitmweb dashboard
