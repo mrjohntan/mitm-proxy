@@ -1,0 +1,20 @@
+# Enterprise Simulated Egress Whitelist
+# Entries support exact hostnames or glob wildcards (e.g., *.domain.com, *-dot-*.domain.com)
+
+whitelist:
+  - "*-dot-asia-southeast1.notebooks.googleusercontent.com"
+  - "cloudresourcemanager.googleapis.com"
+  - "compute.googleapis.com"
+  - "fonts.gstatic.com"
+  - "accounts.google.com"
+  - "analytics.google.com"
+  - "cloud.google.com"
+  - "cloudconsole-pa.clients6.google.com"
+  - "cloudusersettings-pa.clients6.google.com"
+  - "console.cloud.google.com"
+  - "notebooks.clients6.google.com"
+  - "www.gstatic.com"
+
+settings:
+  default_action: "block" # "block" returns 403; "log_only" logs without blocking
+  reload_check_seconds: 2 # Interval in seconds to poll for file changes
