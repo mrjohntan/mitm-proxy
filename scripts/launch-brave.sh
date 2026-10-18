@@ -41,6 +41,7 @@ echo "Launching Brave in background..."
 "$BRAVE_BIN" \
   --proxy-server="$PROXY_URL" \
   --user-data-dir="$TEMP_PROFILE" \
+  --ignore-certificate-errors \
   --no-first-run \
   --no-default-browser-check \
   "${TARGET_ARGS[@]}" >/dev/null 2>&1 &

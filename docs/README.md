@@ -76,6 +76,7 @@ If you prefer running the command directly in your terminal:
 "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser" \
   --proxy-server="http://127.0.0.1:8080" \
   --user-data-dir="/tmp/brave-proxy-session" \
+  --ignore-certificate-errors \
   --no-first-run \
   --no-default-browser-check \
   https://cloud.google.com &
